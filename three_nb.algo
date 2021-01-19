@@ -1,0 +1,22 @@
+ALGORITHM Counters
+VAR
+    sentence : CHAR := '';
+    lenghtCount : INTEGER := 0;
+    wCount : INTEGER := 0;
+    vCount : INTEGER := 0;
+BEGIN
+    WHILE (sentence <> '.') DO
+        Read(c);
+        lenghtCount := lenghtCount +1;
+        IF (sentence = 'a' OR sentence='e' OR sentence='i' OR sentence='o' OR sentence='u' OR sentence='y') THEN
+            wCount := wCount +1;
+        END_IF
+        IF (sentence=' ') THEN
+            wCount := wCount +1;
+        END_IF
+        
+    END_WHILE
+    Write("The length of the sentence is ",lenghtCount);
+    Write("The number of words in the sentence is ",wCount);
+    Write("he number of vowels in the sentence. is ",vCount);
+END
